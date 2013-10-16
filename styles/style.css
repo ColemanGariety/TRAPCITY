@@ -6,7 +6,12 @@
 body {
   background-image: url('../images/brooklyn-bridge.jpg');
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   margin: 0;
+  font-family: 'Big Noodle Tilting';
+  color: #FFF;
 }
 
 #vignette {
@@ -23,15 +28,23 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54000000', endColorstr='#bf000000',GradientType=1 );
 }
 
-h1 {
-  font-family: 'Big Noodle Tilting';
-  color: #FFF;
-  font-weight: 100;
+#container {
+  width: 1176px;
+  height: 900px;
+  top: 50%;
+  margin-top: -450px;
   position: fixed;
-  font-size: 350px;
   left: 50%;
-  margin-left: -587px;
+  margin-left: -583px;
+  z-index: 10000;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 298px;
   text-shadow: 0 0 15px #FFF;
+  position: relative;
+  margin: 0;
 }
 
 h1:after {
@@ -48,34 +61,41 @@ h1:after {
 
 .dancer {
   position: fixed;
-  top: 618px;
-  left: 50%;
-  margin-left: -587px;
   -webkit-transform: scaleY(-1);
+  margin-top: -4px;
+}
+
+#dancer { -webkit-filter: blur(1px); }
+#dancer2 { -webkit-filter: blur(4px); }
+#dancer4 { -webkit-filter: blur(2px); }
+
+#loading {
+  text-align: center;
 }
 
 a {
-  font-family: 'Big Noodle Tilting';
   color: #FFF;
   position: fixed;
-  font-size: 350px;
-  left: 50%;
-  top: 50%;
-  margin-left: -320px;
+  font-size: 250px;
   text-decoration: none;
   text-shadow: 0 0 15px #FFF;
-  z-index: 10000;
+  position: relative;
+  top: 200px;
 }
 
 #time {
-  position: fixed;
-  left: 50%;
-  top: 583px;
+  margin-top: -39px;
   color: #FFF;
-  font-family: 'Big Noodle Tilting';
   font-size: 2.5em;
-  margin-left: 510px;
+  margin-left: -115px;
   text-shadow: 0 0 15px #FFF;
+}
+
+#drop-label {
+  text-align: center;
+  margin-top: 180px;
+  text-shadow: 0 0 15px #FFF;
+  font-size: 2em;
 }
 
 a:hover {
@@ -88,3 +108,7 @@ a:hover {
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 1450px), (max-height: 870px) { #container { -webkit-transform: scale(.8); } }
+@media (max-width: 1150px), (max-height: 670px) { #container { -webkit-transform: scale(.6); } }
+@media (max-width: 850px), (max-height: 470px) { #container { -webkit-transform: scale(.4); } }
