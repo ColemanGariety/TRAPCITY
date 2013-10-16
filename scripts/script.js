@@ -195,16 +195,24 @@
   function loaded() {
     var
       loading = document.getElementById( 'loading' ),
-      anchor  = document.createElement('A'),
+      anchor  = document.createElement('a'),
       supported = Dancer.isSupported(),
       p;
     
     anchor.id = "label"
+    if (navigator.userAgent.indexOf('Chrome') > -1) {
+      var str = 'Play'
+      document.getElementById('drop-label').style.display = 'none'
+    } else {
+      anchor.href = 'http://www.google.com/intl/en/chrome/browser/'
+      console.log(anchor)
+      var str = 'I need chrome'
+    }
     
-    anchor.appendChild( document.createTextNode( supported ? 'Play' : 'Close' ) );
-    anchor.setAttribute( 'href', '#' );
+    anchor.appendChild( document.createTextNode(str) );
     loading.innerHTML = '';
     loading.appendChild( anchor );
+    
 
     if ( !supported ) {
       p = document.createElement('P');
