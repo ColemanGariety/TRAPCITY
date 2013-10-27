@@ -1,6 +1,6 @@
-Run-the-Trap
+TRAPCITY
 ============
 
-A music visualizer based on the one used by TRAPCITY.
+An HTML5 music visualizer for TRAPCITY.
 
-![run the trap](https://raw.github.com/JacksonGariety/Run-the-Trap/master/runthetrap.jpg)
+![run the trap](https://raw.github.com/JacksonGariety/TRAPCITY/master/TRAPCITY.png)
