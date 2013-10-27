@@ -90,7 +90,7 @@
       , ctxGlow = glow.getContext('2d')
       , h       = canvasEl.height
       , w       = canvasEl.width
-      , barWidth   = 6
+      , barWidth   = 12
       , spectrum
 
     ctx.fillStyle = '#FFF'

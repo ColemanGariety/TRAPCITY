@@ -30,13 +30,20 @@ body {
 
 #container {
   width: 1176px;
-  height: 900px;
+  height: 700px;
   top: 50%;
   margin-top: -450px;
   position: fixed;
   left: 50%;
   margin-left: -583px;
   z-index: 10000;
+}
+
+#trapcitylogo{
+  width: 60%;
+  height: 60%;
+  margin-left: 230px;
+  margin-top: 200px;	
 }
 
 h1 {
@@ -50,24 +57,20 @@ h1 {
 h1:after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 35px;
-  background: #FFF;
-  left: 0;
-  bottom: 0;
-  -webkit-box-shadow: 0 0 15px #FFF;
-  -webkit-filter: blur(1px);
+
 }
 
 .dancer {
   position: fixed;
   -webkit-transform: scaleY(-1);
-  margin-top: -4px;
+  margin-left:300px;
+  margin-top: -92px;
+  width: 560px;
 }
 
-#dancer { -webkit-filter: blur(1px); }
-#dancer2 { -webkit-filter: blur(4px); }
-#dancer4 { -webkit-filter: blur(2px); }
+#dancer { -webkit-filter: blur(1px); width: 560px;}
+#dancer2 { -webkit-filter: blur(4px); width: 560px;}
+#dancer4 { -webkit-filter: blur(2px);   width: 560px;}
 
 #loading {
   text-align: center;
@@ -80,7 +83,7 @@ a {
   text-decoration: none;
   text-shadow: 0 0 15px #FFF;
   position: relative;
-  top: 200px;
+  top: 70px;
 }
 
 #time {
@@ -109,6 +112,6 @@ a:hover {
   height: 100%;
 }
 
-@media (max-width: 1450px), (max-height: 870px) { #container { -webkit-transform: scale(.8); } }
+@media (max-width: 1450px), (max-height: 870px) { #container { -webkit-transform: scale(.6); } }
 @media (max-width: 1150px), (max-height: 670px) { #container { -webkit-transform: scale(.6); } }
 @media (max-width: 850px), (max-height: 470px) { #container { -webkit-transform: scale(.4); } }
